@@ -1,0 +1,238 @@
+// ──────────────────────────────────────────────────────────────────────────
+//  °˖* ૮(  • ᴗ ｡)っ🍸  pewdiepie/archdaemon/dionysh shhheersh
+//  Waybar config
+//  vers. 1.0.0
+// ──────────────────────────────────────────────────────────────────────────
+
+{
+  "layer": "bottom",
+  "position": "bottom",
+  "margin-top": 12,
+  "margin-bottom": 12,
+  "width": 1350,
+  "height": 45,
+
+  // ── Modules Layout ───────────────────────────────────────────────
+  "modules-left": [
+    "custom/power",
+    "custom/microphone",
+    "custom/vpn",
+    "network"
+  ],
+
+  "modules-center": [
+  "custom/workspace-1",
+  "custom/workspace-2",
+  "clock",
+  "custom/workspace-3",
+  "custom/workspace-4"
+  ],
+
+  "modules-right": [
+  "custom/volume",
+  "custom/battery",
+  "tray",
+  "custom/music" 
+  ],
+
+  // ── Clock ────────────────────────────────────────────────────────
+  "clock": {
+    "tooltip-format": "{calendar}",
+    "format-alt": "  {:%a, %d %b %Y}",
+    "format": "[   {:%I:%M %p} ]"
+  },
+
+  // ── Workspaces (custom scripts) ──────────────────────────────────
+  "custom/workspace-1": {
+    "exec": "~/.config/waybar/scripts/workspaces/workspace-1.sh",
+    "interval": 1,
+    "on-click": "hyprctl dispatch workspace 1",
+    "tooltip": "Switch to workspace 1"
+  },
+  "custom/workspace-2": {
+    "exec": "~/.config/waybar/scripts/workspaces/workspace-2.sh",
+    "interval": 1,
+    "on-click": "hyprctl dispatch workspace 2",
+    "tooltip": "Switch to workspace 2"
+  },
+  "custom/workspace-3": {
+    "exec": "~/.config/waybar/scripts/workspaces/workspace-3.sh",
+    "interval": 1,
+    "on-click": "hyprctl dispatch workspace 3",
+    "tooltip": "Switch to workspace 3"
+  },
+  "custom/workspace-4": {
+    "exec": "~/.config/waybar/scripts/workspaces/workspace-4.sh",
+    "interval": 1,
+    "on-click": "hyprctl dispatch workspace 4",
+    "tooltip": "Switch to workspace 4"
+  },
+
+
+  // ── Network ──────────────────────────────────────────────────────
+  "network": {
+    "format-wifi": "{icon}",
+    "format-icons": ["[ 󰤯 ]", "[ 󰤟 ]", "[ 󰤢 ]", "[ 󰤥 ]", "[ 󰤨  ]"],
+    "format-ethernet": "󰀂",
+    "format-alt": "󱛇",
+    "format-disconnected": "󰖪",
+    "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "nm-connection-editor",
+    "interval": 5,
+    "nospacing": 1
+  },
+
+   // ── Battery (scripted + built-in) ────────────────────────────────
+   "custom/battery": {
+     "exec": "~/.config/waybar/scripts/battery.sh",
+     "return-type": "json",
+     "interval": 10,
+     "on-click": "xfce4-power-manager-settings"
+   },
+
+
+   "battery": {
+     "format": "{icon}  {capacity}%",
+     "format-icons": {
+       "charging": [
+         "󰢜","󰂆","󰂇","󰂈","󰢝","󰂉","󰢞","󰂊","󰂋","󰂅"
+       ],
+       "default": [
+         "󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"
+       ]
+     },
+     "format-full": "Charged ",
+     "interval": 5,
+     "states": {
+       "warning": 20,
+       "critical": 10
+     },
+     "tooltip": true
+   },
+
+
+  // ── Keyboard ─────────────────────────────────────────────────────
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": " {layout}"
+  },
+
+  // ── Bluetooth ────────────────────────────────────────────────────
+  "bluetooth": {
+    "format": "{icon}",
+    "format-icons": {
+      "enabled": "[  ]",
+      "disabled": "[ 󰂲 ]"
+    },
+    "on-click": "~/.config/waybar/scripts/bluetooth-toggle.sh",
+    "tooltip-format": "Bluetooth is {status}",
+    "interval": 5
+  },
+
+  // -- Uhhhhhhhhhh --------------------------------------------------
+
+  "ext/workspaces": {
+    "format": "•",
+    "sort-by-number": true,
+    "on-click": "workspace {name}",
+    "all-outputs": true,
+    "format-icons": {
+    	"default": "•",
+    	"active": "•",
+    	"urgent": "•"
+    },
+  },
+
+  // ── Asus Profile ─────────────────────────────────────────────────
+  "custom/asus-profile": {
+    "exec": "~/.config/waybar/scripts/asus-profile.sh",
+    "interval": 3,
+    "format": "{}",
+    "tooltip": true,
+    "tooltip-format": "Toggle power profile",
+    "on-click": "/home/sandwich/.config/waybar/scripts/cycle-profiles-bash.sh"
+  },
+
+  // ── Microphone ───────────────────────────────────────────────────
+  "custom/microphone": {
+    "exec": "~/.config/waybar/scripts/mic.sh",
+    "interval": 1,
+    "tooltip": true,
+    "tooltip-format": "Mic Toggle",
+    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+  },
+
+  // ── Brightness ───────────────────────────────────────────────────
+  "custom/brightness": {
+    "exec": "~/.config/waybar/scripts/brightness.sh",
+    "return-type": "json",
+    "interval": 2,
+    "on-click": "~/.config/waybar/scripts/brightness-toggle.sh",
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-"
+  },
+
+  "backlight": {
+    "format": "󰛨  {percent}%",
+    "format-icons": ["󰃞","󰃟","󰃠","󰃝","󰃜","󰃛"],
+    "class": "flicker-bar",
+    "on-click": "~/.config/waybar/scripts/brightness-slider.sh"
+  },
+
+  // -- wazaaaaaa ------------------------------------
+
+    "custom/music": {
+        "format": "{}",
+    	"return-type": "json",
+        "exec": "waybar-module-music",
+        "on-click": "playerctl play-pause"
+    },
+
+  // ── Volume ───────────────────────────────────────────────────────
+  "custom/volume": {
+    "exec": "~/.config/waybar/scripts/volume.sh",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-scroll-up": "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+  },
+
+
+  // ── VPN ──────────────────────────────────────────────────────────
+  "custom/vpn": {
+    "interval": 5,
+    "on-click": "protonvpn-app",
+    "format": "[ 🌐 ]",
+    "markup": "pango",
+    "tooltip": true,
+    "tooltip-format": "VPN Status / Toggle"
+  },
+
+  // -- System tray --------------------------------------------------
+
+  "tray": {
+  	"icon-size": 15,
+  	"spacing": 5,
+    "return-type": "json",
+  	"show-passive-items": true
+  },
+
+  // ── Power ────────────────────────────────────────────────────────
+  "custom/power": {
+    "format": "[ 󰤆 ]",
+    "tooltip": true,
+    "tooltip-format": "Power Menu",
+    "on-click": "~/.config/waybar/scripts/powermenu.sh"
+  },
+
+  // ── Spacer ───────────────────────────────────────────────────────
+  "custom/squares": {
+    "format": " ",
+    "tooltip": false
+  }
+}
+

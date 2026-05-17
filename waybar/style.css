@@ -1,0 +1,233 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   °˖* ૮(  • ᴗ ｡)っ🍸  pewdiepie/archdaemon/dionysh  shhheersh
+   Waybar CSS styling
+   vers. 1.0
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* === Base Waybar Styling ================================================= */
+
+waybar * {
+  border: 2px;
+  border-radius: 1px;
+  min-height: 16px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 16px;
+}
+
+#waybar {
+  background-color: #3b4252;
+  border-radius: 1px;
+  opacity: 0.95;
+}
+
+window#waybar {
+  background: #2D1B3E;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  color: #9cdef2;
+  border: 1px solid #7C3AED;
+  border-left: 1px solid #7C3AED;
+  border-right: 1px solid #7C3AED;
+}
+
+
+/* === Workspaces ========================================================== */
+
+#workspaces {
+  background-color: transparent; 
+  padding-left: 40px;
+}
+
+#workspaces button {
+  all: initial;
+  font-size: 16px;
+  min-width: 0;
+  box-shadow: inherit;
+  padding: 2px 2px;
+  margin: 2px 2px;
+  border-radius: 1px;
+  background-color: #2e3440;
+  color: #56b6c2;
+}
+ 
+#workspaces button.active {
+  color: #fab387;
+  background-color: #56b6c2;
+}
+
+#workspaces button:hover {
+  color: #2e3440;
+  background-color: #56b6c2;
+}
+
+
+/* === Default Module Container Styling ==================================== */
+
+#custom-microphone,
+#bluetooth,
+#custom-bluetooth,
+#custom-brightness,
+#custom-volume,
+#custom-battery,
+#custom-power,
+#custom-asus-profile,
+#network,
+#battery,
+#pulseaudio,
+#backlight,
+#custom-vpn,
+#custom-music,
+#workspaces,
+#clock,
+#tray {
+  padding: 4px 12px;
+  margin: 4px 6px;
+  background-color: #292d35;
+  border: 2px solid #C4B5FD;
+  border-radius: 2px;
+}
+
+
+/* === Audio ============================================================== */
+
+#pulseaudio.muted {
+  background-color: #f38ba8;
+  color: #7C3AED;
+}
+
+/* hi guys james charles here */
+
+
+/* === Custom Workspace Labels ============================================= */
+
+#custom-work-left,
+#custom-work-right {
+  padding: 6px 6px;
+  margin: 6px 3px;
+}
+
+#custom-workspace-1:hover,
+#custom-workspace-2:hover,
+#custom-workspace-3:hover,
+#custom-workspace-4:hover {
+  color: #fab387; 
+  transition: all 0.2s ease-in-out;
+}
+
+/* === Bluetooth =========================================================== */
+
+#bluetooth.disabled {
+  color: #7C3AED;
+}
+
+#custom-bluetooth {
+  color: #7C3AED;
+  transition: color 0.2s ease-in-out;
+}
+
+
+/* === Network ============================================================= */
+
+#network.disconnected {
+  background-color: #f38ba8;
+  color: #7C3AED;
+}
+
+
+/* === Clock =============================================================== */
+
+#clock {
+  font-weight: bold;
+  font-size: 12px;
+  color: #7C3AED;
+}
+
+
+/* === Asus Profile ======================================================== */
+
+#custom-asus-profile {
+  font-weight: bold;
+  font-size: 12px;
+  color: #7C3AED;
+}
+
+
+
+/* === VPN ================================================================= */
+
+#custom-vpn {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+
+/* === Brightness ========================================================== */
+
+#backlight {
+  background-color: #3b4252;
+}
+
+
+/* === Tray ================================================================ */
+
+#tray {
+  padding: 6px 12px;
+  margin: 6px 6px;
+}
+
+/* muzsika */
+
+#custom-music {
+	padding: 6px 12px;
+	margin: 6px 6px;
+}
+
+#custom-music.playing {
+    color: #a6e3a1;
+	background: #1e1e2e;
+}
+
+#custom-music.stopped {
+    color: #6c7086;
+	background: #1e1e2e;
+}
+
+/* === Hover Effects ======================================================= */
+/* Unified look for all interactive modules                                */
+
+#custom-microphone:hover,
+#custom-volume:hover,
+#pulseaudio:hover,
+#network:hover,
+#custom-vpn:hover,
+#bluetooth:hover,
+#custom-bluetooth:hover,
+#custom-power:hover,
+#custom-asus-profile:hover,
+#custom-battery:hover,
+#workspaces:hover,
+#battery:hover,
+#backlight:hover,
+#custom-brightness:hover,
+#clock:hover,
+#tray:hover {
+  background-color: #4c566a;
+  border: 2px solid #56b6c2;
+  color: #E9D5FF;
+  transition: all 0.2s ease-in-out;
+}
+
+
+/* === Tooltips ============================================================ */
+
+tooltip {
+  color: #7C3AED;
+  background-color: #3b4252;
+  border: 1px solid #56b6c2;
+  font-weight: bold;
+}
+
+tooltip label {
+  color: #7C3AED;
+}
+

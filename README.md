@@ -26,4 +26,4 @@ Fastfetch: https://github.com/LinuxBeginnings/Hyprland-Dots/blob/main/config/fas
 
 Conky: Im so sorry i forgot where i got it from
 
-Alacritty: actually also written by mehttps://github.com/LinuxBeginnings/Hyprland-Dots/blob/main/config/fastfetch/config-compact.jsonc
+Alacritty: Also written by me

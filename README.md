@@ -12,7 +12,7 @@ knowing a single fuck about "micro", partially so my thinkpad's keyboard makes e
 Almost everything that you really need is literally right here, but if you want the full and
 complete dotfiles to work perfectly, you should run this command:
 
-```yay -S conky waybar oh-my-bash-git pywal alacritty swaybg hyprland fastfetch rofi micro```
+```yay -S conky waybar oh-my-bash-git pywal alacritty swaybg hyprland fastfetch rofi micro tint2 windowmaker```
 
 You can switch out swaybg or pywal to something like feh and hellwal but this repo is tailored
 to those 2 and you need those unless you want to configure the whole thing again to work with 

@@ -1,0 +1,19 @@
+{
+  Logo.WMDock = {Icon = GNUstepGlow.tiff;};
+  Logo.WMPanel = {Icon = GNUstep.tiff;};
+  Logo.WMClip = {Icon = clip.tiff;};
+  WMDrawer = {Icon = Drawer.tiff;};
+  Alacritty.Alacritty = {Icon = Terminal.tiff;};
+  Kitty.Kitty = {Icon = TerminalLinux.tiff;};
+  Konsole.Konsole = {Icon = GNUterm.tiff;};
+  LibreWolf.LibreWolf = {Icon = Mozilla.png;};
+  Epiphany.Epiphany = {Icon = Mozilla.png;};
+  Dolphin.Dolphin = {Icon = defaultAppIcon.tiff;};
+  Nautilus.Nautilus = {Icon = defaultAppIcon.tiff;};
+  Kate.Kate = {Icon = notepad.tiff;};
+  KWrite.KWrite = {Icon = notepad.tiff;};
+  mpv.mpv = {Icon = Speaker.png;};
+  Spectacle.Spectacle = {Icon = draw.tiff;};
+  Conky.Conky = {Icon = timer.tiff;};
+  "*" = {Icon = defaultAppIcon.tiff;SharedAppIcon = Yes;};
+}

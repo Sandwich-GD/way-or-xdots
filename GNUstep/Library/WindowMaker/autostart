@@ -1,0 +1,47 @@
+#!/bin/sh
+# Applications to start with Windowsmaker
+
+# Hungarian keyboard layout
+setxkbmap hu
+
+# Set wallpaper
+if [ -f $HOME/GNUstep/Library/WindowMaker/Backgrounds/anders-jilden-AkUR27wtaxs-unsplash.jpg ]; then
+  wmsetbg -s $HOME/GNUstep/Library/WindowMaker/Backgrounds/anders-jilden-AkUR27wtaxs-unsplash.jpg &
+fi
+
+# Compositor (smooth rendering)
+if command -v picom >/dev/null 2>&1; then
+  picom --experimental-backends &
+fi
+
+# Network Manager applet
+if command -v nm-applet >/dev/null 2>&1; then
+  nm-applet &
+fi
+
+# Bluetooth applet
+if command -v blueman-applet >/dev/null 2>&1; then
+  blueman-applet &
+fi
+
+# Hotkey daemon (Win+D -> rofi)
+if command -v xbindkeys >/dev/null 2>&1; then
+  xbindkeys &
+fi
+
+# Desktop notifications
+if command -v dunst >/dev/null 2>&1; then
+  dunst &
+elif command -v twmnd >/dev/null 2>&1; then
+  twmnd &
+fi
+
+# Conky (lightweight system monitor)
+if command -v conky >/dev/null 2>&1; then
+  conky &
+fi
+
+# Polybar status bar
+if command -v tint2 >/dev/null 2>&1; then
+  $HOME/.config/tint2/launch.sh &
+fi

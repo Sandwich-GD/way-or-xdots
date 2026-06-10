@@ -1,0 +1,146 @@
+# ──────────────────────────────────────────────────────────────
+#  °˖* ૮(  • ᴗ ｡)っ🍸  pewdiepie/archdaemon/dionysh shhheersh
+#  tint2 config — waybar inspired container tab styling
+# ──────────────────────────────────────────────────────────────
+
+#-------------------------------------
+# Backgrounds
+#-------------------------------------
+
+# Background 1: Bar background + top border
+rounded = 0
+border_width = 2
+border_sides = T
+background_color = #2D1B3E 100
+border_color = #7C3AED 100
+
+# Background 2: Module container tab
+rounded = 0
+border_width = 0
+background_color = #292d35 100
+border_color = #C4B5FD 100
+
+#-------------------------------------
+# Panel
+#-------------------------------------
+panel_items = E E E E F C F E E E
+panel_size = 100% 34
+panel_margin = 0 0
+panel_padding = 2 2 2
+panel_background_id = 1
+panel_position = bottom center horizontal
+panel_layer = normal
+panel_monitor = all
+panel_shrink = 0
+autohide = 0
+strut_policy = follow_size
+disable_transparency = 0
+mouse_effects = 0
+font_shadow = 0
+
+#-------------------------------------
+# Clock
+#-------------------------------------
+time1_format =  %I:%M %p
+time1_font = JetBrainsMono Nerd Font 13
+clock_font_color = #E9D5FF 100
+clock_padding = 4 4
+clock_background_id = 2
+clock_lclick_command = orage
+clock_tooltip = %A %d %B %Y
+
+#-------------------------------------
+# Executor 1: Power
+#-------------------------------------
+execp = new
+execp_command = echo "[  󰤆  ]"
+execp_interval = 0
+execp_font = JetBrainsMono Nerd Font 13
+execp_font_color = #E9D5FF 100
+execp_background_id = 2
+execp_padding = 4 4
+execp_lclick_command = ~/.config/tint2/scripts/powermenu.sh
+
+#-------------------------------------
+# Executor 2: Microphone
+#-------------------------------------
+execp = new
+execp_command = ~/.config/tint2/scripts/mic.sh
+execp_interval = 1
+execp_font = JetBrainsMono Nerd Font 13
+execp_background_id = 2
+execp_padding = 4 4
+execp_markup = 1
+execp_lclick_command = pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+#-------------------------------------
+# Executor 3: VPN
+#-------------------------------------
+execp = new
+execp_command = echo "[  🌐  ]"
+execp_interval = 0
+execp_font = JetBrainsMono Nerd Font 13
+execp_font_color = #C4B5FD 100
+execp_background_id = 2
+execp_padding = 4 4
+execp_lclick_command = protonvpn-app
+
+#-------------------------------------
+# Executor 4: Network
+#-------------------------------------
+execp = new
+execp_command = ~/.config/tint2/scripts/network.sh
+execp_interval = 5
+execp_font = JetBrainsMono Nerd Font 13
+execp_background_id = 2
+execp_padding = 4 4
+execp_lclick_command = nm-connection-editor
+
+#-------------------------------------
+# Executor 5: Volume
+#-------------------------------------
+execp = new
+execp_command = ~/.config/tint2/scripts/volume.sh
+execp_interval = 1
+execp_font = JetBrainsMono Nerd Font 13
+execp_background_id = 2
+execp_padding = 4 4
+execp_markup = 1
+execp_lclick_command = wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+execp_uwheel_command = wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
+execp_dwheel_command = wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+
+#-------------------------------------
+# Executor 6: Battery
+#-------------------------------------
+execp = new
+execp_command = ~/.config/tint2/scripts/battery.sh
+execp_interval = 10
+execp_font = JetBrainsMono Nerd Font 13
+execp_background_id = 2
+execp_padding = 4 4
+execp_markup = 1
+execp_lclick_command = xfce4-power-manager-settings
+
+#-------------------------------------
+# Executor 7: Music
+#-------------------------------------
+execp = new
+execp_command = ~/.config/tint2/scripts/music.sh
+execp_interval = 1
+execp_font = JetBrainsMono Nerd Font 13
+execp_font_color = #C4B5FD 100
+execp_background_id = 2
+execp_padding = 4 4
+execp_lclick_command = playerctl play-pause
+execp_rclick_command = playerctl next
+
+#-------------------------------------
+# Tooltip
+#-------------------------------------
+tooltip_show_timeout = 0.5
+tooltip_hide_timeout = 0.1
+tooltip_padding = 4 4
+tooltip_background_id = 0
+tooltip_font_color = #E9D5FF 100
+tooltip_font = JetBrainsMono Nerd Font 11

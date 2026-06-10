@@ -1,0 +1,54 @@
+{
+  Konsole.Konsole = {
+    Icon = GNUterm.tiff;
+  };
+  Dolphin.Dolphin = {
+    Icon = defaultAppIcon.tiff;
+  };
+  Alacritty.Alacritty = {
+    Icon = Terminal.tiff;
+  };
+  Spectacle.Spectacle = {
+    Icon = draw.tiff;
+  };
+  Kitty.Kitty = {
+    Icon = TerminalLinux.tiff;
+  };
+  KWrite.KWrite = {
+    Icon = notepad.tiff;
+  };
+  Logo.WMPanel = {
+    Icon = GNUstep.tiff;
+  };
+  Nautilus.Nautilus = {
+    Icon = defaultAppIcon.tiff;
+  };
+  LibreWolf.LibreWolf = {
+    Icon = Mozilla.png;
+  };
+  Epiphany.Epiphany = {
+    Icon = Mozilla.png;
+  };
+  Kate.Kate = {
+    Icon = notepad.tiff;
+  };
+  Conky.Conky = {
+    Icon = timer.tiff;
+  };
+  WMDrawer = {
+    Icon = Drawer.tiff;
+  };
+  Logo.WMDock = {
+    Icon = GNUstepGlow.tiff;
+  };
+  mpv.mpv = {
+    Icon = Speaker.png;
+  };
+  "*" = {
+    SharedAppIcon = Yes;
+    Icon = defaultAppIcon.tiff;
+  };
+  Logo.WMClip = {
+    Icon = clip.tiff;
+  };
+}

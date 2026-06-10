@@ -1,0 +1,5 @@
+#!/bin/sh
+# Commands to execute when WindowMaker exits
+
+# Kill background processes started by autostart
+killall picom nm-applet blueman-applet volumeicon pasystray cbatticon conky 2>/dev/null

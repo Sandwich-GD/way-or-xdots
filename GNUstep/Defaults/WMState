@@ -1,0 +1,157 @@
+{
+  Dock = {
+    AutoRaiseLower = No;
+    Applications = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = No;
+        Command = "-";
+      }
+    );
+    Applications1080 = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = No;
+        Command = "-";
+      }
+    );
+    Lowered = Yes;
+    Position = "0,0";
+  };
+  Clip = {
+    Forced = No;
+    Name = Logo.WMClip;
+    BuggyApplication = No;
+    AutoLaunch = No;
+    Position = "1302,0";
+    Lock = No;
+    Command = "-";
+  };
+  Applications = (
+    {
+      Maximized = 0x0000;
+      Name = Alacritty.Alacritty;
+      Shaded = No;
+      Miniaturized = No;
+      Command = alacritty;
+      Geometry = "1191x780+64+0";
+      Hidden = No;
+      Workspace = "Munkafel\303\274let 2";
+      ShortcutMask = 0;
+    },
+    {
+      Dock = "Munkafel\303\274let 1";
+      Maximized = 0x0000;
+      Name = librewolf.Librewolf;
+      Shaded = No;
+      Miniaturized = No;
+      Command = librewolf;
+      Geometry = "1920x1049+1364+-1";
+      Hidden = No;
+      Workspace = "Munkafel\303\274let 2";
+      ShortcutMask = 0;
+    },
+    {
+      Maximized = 0x0000;
+      Name = Conky.Conky;
+      Shaded = No;
+      Miniaturized = No;
+      Command = conky;
+      Geometry = "1041x790+5+-5";
+      Hidden = No;
+      Workspace = "Munkafel\303\274let 2";
+      ShortcutMask = 0;
+    },
+    {
+      Maximized = 0x0000;
+      Name = Conky.Conky;
+      Shaded = No;
+      Miniaturized = No;
+      Command = conky;
+      Geometry = "1041x790+5+-5";
+      Hidden = No;
+      Workspace = "Munkafel\303\274let 2";
+      ShortcutMask = 0;
+    },
+    {
+      Maximized = 0x0000;
+      Name = Conky.Conky;
+      Shaded = No;
+      Miniaturized = No;
+      Command = conky;
+      Geometry = "1041x790+5+-5";
+      Hidden = No;
+      Workspace = "Munkafel\303\274let 2";
+      ShortcutMask = 0;
+    },
+    {
+      Maximized = 0x0000;
+      Name = tint2.Tint2;
+      Shaded = No;
+      Miniaturized = No;
+      Command = "tint2 -c /home/sandwich/.config/tint2/tint2rc";
+      Geometry = "1366x34+0+734";
+      Hidden = No;
+      Workspace = "Munkafel\303\274let 2";
+      ShortcutMask = 0;
+    },
+    {
+      Maximized = 0x0000;
+      Name = tint2.Tint2;
+      Shaded = No;
+      Miniaturized = No;
+      Command = "tint2 -c /home/sandwich/.config/tint2/tint2rc";
+      Geometry = "1920x34+1366+1046";
+      Hidden = No;
+      Workspace = "Munkafel\303\274let 2";
+      ShortcutMask = 0;
+    }
+  );
+  Drawers = ();
+  Workspaces = (
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = (
+          {
+            Forced = No;
+            Name = librewolf.Librewolf;
+            DropCommand = "librewolf %d";
+            BuggyApplication = No;
+            AutoLaunch = No;
+            Position = "1,0";
+            Lock = No;
+            PasteCommand = "librewolf %s";
+            Command = librewolf;
+            Omnipresent = No;
+          }
+        );
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = "Munkafel\303\274let 1";
+    },
+    {
+      Clip = {
+        AutoRaiseLower = No;
+        AutoCollapse = No;
+        Applications = ();
+        Collapsed = No;
+        AutoAttractIcons = No;
+        Lowered = Yes;
+      };
+      Name = "Munkafel\303\274let 2";
+    }
+  );
+  Workspace = "Munkafel\303\274let 2";
+}

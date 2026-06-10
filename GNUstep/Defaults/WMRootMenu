@@ -1,0 +1,143 @@
+(
+  "Window Maker",
+  (
+    Applications,
+    (
+      Terminals,
+      (Alacritty, EXEC, alacritty),
+      (Kitty, EXEC, kitty),
+      (Konsole, EXEC, konsole),
+      (xterm, EXEC, xterm)
+    ),
+    (
+      Internet,
+      (LibreWolf, EXEC, librewolf),
+      (Epiphany, EXEC, epiphany)
+    ),
+    (
+      "File Managers",
+      (Dolphin, EXEC, dolphin),
+      (Nautilus, EXEC, "nautilus --no-desktop")
+    ),
+    (
+      Editors,
+      (Kate, EXEC, kate),
+      (KWrite, EXEC, kwrite),
+      (VIM, EXEC, "xterm -e vim"),
+      (Nano, EXEC, "xterm -e nano")
+    ),
+    (
+      Office,
+      ("OpenOffice Writer", EXEC, openoffice4-writer),
+      ("OpenOffice Calc", EXEC, openoffice4-calc),
+      ("OpenOffice Impress", EXEC, openoffice4-impress),
+      ("OpenOffice Draw", EXEC, openoffice4-draw),
+      ("OpenOffice Base", EXEC, openoffice4-base),
+      ("OpenOffice Math", EXEC, openoffice4-math)
+    ),
+    (
+      Graphics,
+      (Spectacle, EXEC, spectacle)
+    ),
+    (
+      Media,
+      (mpv, EXEC, mpv),
+      (EasyEffects, EXEC, easyeffects),
+      ("ALSA Mixer", EXEC, "xterm -e alsamixer")
+    ),
+    (
+      Utilities,
+      (Rofi, EXEC, "rofi -show run"),
+      (Conky, EXEC, conky),
+      ("PulseAudio Volume", EXEC, pavucontrol),
+      (Calculator, EXEC, kcalc),
+      (btop, EXEC, "xterm -e btop"),
+      ("ARandR", EXEC, arandr)
+    ),
+    (
+      System,
+      ("Virt Manager", EXEC, virt-manager),
+      ("Gnome Boxes", EXEC, gnome-boxes),
+      ("Firewall Config", EXEC, "xterm -e sudo firewall-config"),
+      (top, EXEC, "xterm -e top"),
+      ("System Monitor", EXEC, "xterm -e btop")
+    ),
+    (
+      Bluetooth,
+      ("Bluetooth Manager", EXEC, blueman-manager),
+      ("Send File", EXEC, blueman-sendto),
+      ("Adapters", EXEC, blueman-adapters)
+    ),
+    (
+      "Window Maker",
+      (Docker, EXEC, "docker -wmaker"),
+      (Magnify, EXEC, wmagnify)
+    )
+  ),
+  (Run..., SHEXEC, "%A(Run, Type command:)"),
+  (
+    Appearance,
+    (
+      Themes,
+      OPEN_MENU,
+      "-noext /usr/share/WindowMaker/Themes $HOME/GNUstep/Library/WindowMaker/Themes WITH setstyle"
+    ),
+    (
+      Styles,
+      OPEN_MENU,
+      "-noext /usr/share/WindowMaker/Styles $HOME/GNUstep/Library/WindowMaker/Styles WITH setstyle"
+    ),
+    (
+      "Icon Sets",
+      OPEN_MENU,
+      "-noext /usr/share/WindowMaker/IconSets $HOME/GNUstep/Library/WindowMaker/IconSets WITH seticons"
+    ),
+    (
+      Background,
+      (
+        Solid,
+        (Black, EXEC, "wdwrite WindowMaker WorkspaceBack '(solid, \"black\")'"),
+        (Blue, EXEC, "wdwrite WindowMaker WorkspaceBack '(solid, \"#505075\")'"),
+        (Indigo, EXEC, "wdwrite WindowMaker WorkspaceBack '(solid, \"#243e6c\")'"),
+        (Purple, EXEC, "wdwrite WindowMaker WorkspaceBack '(solid, \"#554466\")'"),
+        ("Dark Gray", EXEC, "wdwrite WindowMaker WorkspaceBack '(solid, \"#333340\")'")
+      ),
+      (
+        Gradient,
+        (Sunset, EXEC, "wdwrite WindowMaker WorkspaceBack '(mvgradient, deepskyblue4, black, deepskyblue4, tomato4)'"),
+        (Sky, EXEC, "wdwrite WindowMaker WorkspaceBack '(vgradient, \"blue4\", \"white\"'"),
+        ("Blue Shades", EXEC, "wdwrite WindowMaker WorkspaceBack '(vgradient, \"#7080a5\", \"#101020\"'"),
+        ("Indigo Shades", EXEC, "wdwrite WindowMaker WorkspaceBack '(vgradient, \"#746ebc\", \"#242e4c\"'")
+      ),
+      (
+        Images,
+        OPEN_MENU,
+        "-noext $HOME/GNUstep/Library/WindowMaker/Backgrounds WITH wmsetbg -u -t"
+      )
+    ),
+    (
+      "Save Theme",
+      SHEXEC,
+      "getstyle -p \"%a(Theme name, Name to save theme as)\""
+    ),
+    (
+      "Save IconSet",
+      SHEXEC,
+      "geticonset $HOME/GNUstep/Library/WindowMaker/IconSets/\"%a(IconSet name,Name to save icon set as)\""
+    )
+  ),
+  (Workspaces, WORKSPACE_MENU),
+  (
+    Workspace,
+    ("Hide Others", HIDE_OTHERS),
+    ("Show All", SHOW_ALL),
+    ("Arrange Icons", ARRANGE_ICONS),
+    (Refresh, REFRESH),
+    ("Save Session", SAVE_SESSION),
+    ("Clear Session", CLEAR_SESSION)
+  ),
+  ("Configure Window Maker", EXEC, WPrefs),
+  ("Info Panel", INFO_PANEL),
+  ("Restart Window Maker", RESTART),
+  ("Exit Window Maker", EXIT)
+)

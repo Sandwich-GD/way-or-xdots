@@ -28,6 +28,10 @@ Micro: Solarized color theme, just select it in the cmd in micro
 
 Hyprland: wrote the config by myself
 
+Windowmaker: vibecoded it myself
+
+tint2: vibecoded it too :3 
+
 Fastfetch: https://github.com/LinuxBeginnings/Hyprland-Dots/blob/main/config/fastfetch/config-compact.jsonc
 
 Conky: Im so sorry i forgot where i got it from
